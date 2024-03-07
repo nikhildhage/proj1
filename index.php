@@ -72,6 +72,9 @@ if (isset($_POST['submit_post'])) {
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <?php
+        $message=" I am old enough to vote in the United states";  
+    ?>
     <main>
         <h1>Web Processor</h1>
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" >
@@ -89,6 +92,16 @@ if (isset($_POST['submit_post'])) {
             <br><br>
             <div>
                 <h2><?php echo $greeting . " " . $firstName ." ". $lastName; ?></h2>
+                <h2><?php 
+                   if($age >= 18)
+                   {
+                     echo "I  am {$age} years old and {$message}";
+                   }
+                   else{
+                       $message=" I am not old enough to vote in the United States"; 
+                       echo "I  am {$age} years old and {$message}";
+                   }
+                ?></h2>
             </div>
         </form>
     </main>
