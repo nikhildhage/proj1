@@ -103,7 +103,7 @@ if (isset($_POST['submit_post'])) {
                    }
                 ?></h2>
                 <h2><?php
-                //Calculates  number of Days given an age by user from form
+                //Calculates number of Days given an age by user from form
                  $currentYear = "2024"; // Replace with your desired year
                  $month = "02";   // Replace with your desired month (1-12)
                  $day = "10";     // Replace with your desired day (1-31)
@@ -115,6 +115,11 @@ if (isset($_POST['submit_post'])) {
                  $dateDiff = $now - $your_date;
                  $age_days = round($dateDiff / (60 * 60 * 24));
                  echo "Age in days: $age_days";
+                ?></h2>
+                <h2><?php
+                //Added Today's Date
+                    $currentDate=date("m-d-y");
+                    echo "Today's date is {$currentDate}";
                 ?></h2>
             </div>
         </form>
