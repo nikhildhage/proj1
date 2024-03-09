@@ -73,7 +73,7 @@ if (isset($_POST['submit_post'])) {
 </head>
 <body>
     <?php
-        $message=" I am old enough to vote in the United states";  
+        $message=" I am old enough to vote in the United states";
     ?>
     <main>
         <h1>Web Processor</h1>
@@ -99,8 +99,22 @@ if (isset($_POST['submit_post'])) {
                    }
                    else{
                        $message=" I am not old enough to vote in the United States"; 
-                       echo "I  am {$age} years old and {$message}";
+                       echo "I am {$age} years old and {$message}";
                    }
+                ?></h2>
+                <h2><?php
+                //Calculates  number of Days given an age by user from form
+                 $currentYear = "2024"; // Replace with your desired year
+                 $month = "02";   // Replace with your desired month (1-12)
+                 $day = "10";     // Replace with your desired day (1-31)
+                 $diffYear=abs($currentYear -$age);
+
+                 $birthDate = "$diffYear-$month-$day"; // Replace with the actual birthdate in the yyyy-mm-dd format
+                 $now = time();
+                 $your_date = strtotime($birthDate);
+                 $dateDiff = $now - $your_date;
+                 $age_days = round($dateDiff / (60 * 60 * 24));
+                 echo "Age in days: $age_days";
                 ?></h2>
             </div>
         </form>
