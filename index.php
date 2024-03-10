@@ -9,7 +9,7 @@ $age =  filter_input(INPUT_GET, "age", FILTER_SANITIZE_NUMBER_INT);
 //HTTP GET Request handler 
 function handleHttpGet() {
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        // Process GET data here (e.g., retrieve form input values)
+        // Process GET data here 
         if(isset($_GET["first"]) && isset($_GET["last"]) && isset($_GET["age"]) ){
             $firstName=$_GET["first"];
             $lastName=$_GET["last"];
@@ -35,7 +35,7 @@ $age =  filter_input(INPUT_POST, "age", FILTER_SANITIZE_NUMBER_INT);
 //HTTP POST Request handler 
 function handleHttpPost() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Process POST data here (e.g., retrieve form input values)
+        // Process POST data here 
         #POST
         if(isset($_POST["first"]) && isset($_POST["last"]) && isset($_POST["age"])){
             $firstName=$_POST["first"];
