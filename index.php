@@ -109,7 +109,7 @@ if (isset($_POST['submit_post'])) {
                  $day = "10";     // Replace with your desired day (1-31)
                  $diffYear=abs($currentYear -$age);
 
-                 $birthDate = "$diffYear-$month-$day"; // Replace with the actual birthdate in the yyyy-mm-dd format
+                 $birthDate = "$diffYear-$month-$day"; // Replace with the actual birthDate in the yyyy-mm-dd format
                  $now = time();
                  $your_date = strtotime($birthDate);
                  $dateDiff = $now - $your_date;
